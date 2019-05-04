@@ -1,2 +1,2 @@
 # almundo
-Api Rest y Gui Frontend para aplicación almundo.com
+Api Rest aplicación almundo.com
