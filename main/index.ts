@@ -1,13 +1,13 @@
-import express, { Request, Response } from "express";
+import "module-alias/register";
+
+import express from "express";
+import RootRouter from "@app/routers/RootRouter";
 
 const app = express();
 
-app.get("/", (req: Request, res: Response) => {
-    res.send("Hello World")
-});
+new RootRouter(app);
 
-const PORT = process.env.PORT || 30000;
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-     console.log(`Server Listen in http://localhost:${PORT}`);
-})
+  console.log(`Server Listen in http://localhost:${PORT}`);
+});
