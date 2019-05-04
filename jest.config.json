@@ -1,0 +1,19 @@
+{
+  "transform": {
+    ".(ts|tsx)": "ts-jest"
+  },
+  "testRegex": "(/test/unit/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "reporters": [
+    "default",
+    ["jest-html-reporters", {
+      "publicPath": "test/reports",
+      "filename": "jest_report.html"
+    }]
+  ]
+}
