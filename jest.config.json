@@ -1,4 +1,5 @@
 {
+  "name": "almundo api rest",
   "setupFilesAfterEnv": ["<rootDir>/test/unit/setup.ts"],
   "transform": {
     ".(ts|tsx)": "ts-jest"
@@ -20,5 +21,8 @@
   "moduleNameMapper": {
     "@app/(.*)$": "<rootDir>/main/$1",
     "@test/(.*)$": "<rootDir>/test/$1"
-  }
+  },
+  "collectCoverage": true,
+  "coverageReporters": ["lcov"],
+  "coverageDirectory": "./coverage/"
 }

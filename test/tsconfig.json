@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",                       /* Base directory to resolve non-absolute module names. */
+    "paths": {
+      "@app/*": ["../main/*"],
+      "@test/*": ["../test/*"]
+    },      
+  }
+}

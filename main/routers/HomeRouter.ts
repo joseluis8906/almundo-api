@@ -9,6 +9,6 @@ export default class HomeRouter {
     this.endPoint = `/`;
     this.controller = new HomeController();
 
-    app.route(this.endPoint).get(this.controller.home.bind(this));
+    app.route(this.endPoint).get(this.controller.index.bind(this));
   }
 }
