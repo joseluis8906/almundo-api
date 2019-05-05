@@ -8,8 +8,8 @@ export default class HotelQueryFilter {
   private hotels: Array<Hotel>;
   private business: HotelBusiness;
 
-  constructor(page: number, name: string, amenities: Array<string> | null) {
-    this.page = page | 1;
+  constructor(page: number | null, name: string | null, amenities: Array<string> | null) {
+    this.page = page ? page : 1;
     this.name = name;
     this.amenities = amenities;
 

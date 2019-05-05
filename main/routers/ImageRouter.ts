@@ -1,14 +1,11 @@
-import { Application } from "express";
-import ImageController from "@app/controllers/ImageController";
+import express, { Application } from "express";
 
 export default class ImageRouter {
   private endPoint: string;
-  private controller: ImageController;
 
   constructor(app: Application, version: string) {
-    this.endPoint = `${version}/images`;
-    this.controller = new ImageController();
+    this.endPoint = `/static`;
 
-    app.route(this.endPoint).get(this.controller.findOne.bind(this.controller));
+    app.use(this.endPoint, express.static("/app/dist/contrib/assets"));
   }
 }
