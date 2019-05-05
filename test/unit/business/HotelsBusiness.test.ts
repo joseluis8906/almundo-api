@@ -1,9 +1,18 @@
 import HotelBusiness from "@app/contrib/business/HotelBusiness";
 import * as chai from "chai";
+import Hotel from "@app/models/Hotel";
 
 const business: HotelBusiness = new HotelBusiness();
 
 describe("Pruebas unitarias HotelBusiness", () => {
+  test("Debe responder al método findOne", () => {
+    chai.expect(business).respondsTo("findOne");
+  });
+
+  test("Debe devolver un objeto Hotel al llamar al método findOne", () => {
+    chai.expect(business.findOne("249942")).not.to.be.null.and.to.be.instanceof(Hotel);
+  });
+
   test("Debe responder al método listAll", () => {
     chai.expect(business).respondsTo("listAll");
   });

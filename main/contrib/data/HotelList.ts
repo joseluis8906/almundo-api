@@ -1,4 +1,6 @@
-[
+import Hotel from "@app/models/Hotel";
+
+export const HOTEL_LIST: Array<Hotel> = [
   {
     "id": "249942",
     "name": "Hotel Stefanos",

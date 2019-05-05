@@ -1,29 +1,39 @@
-import Hotel from "@app/contrib/objects/Hotel";
+import Hotel from "@app/models/Hotel";
 
-const data: Hotel[] = require("@app/contrib/data/hotels.json");
+import { HOTEL_LIST } from "@app/contrib/data/HotelList";
 
 export default class HotelBusiness {
   
+  public findOne(id: string): Hotel | null {
+    for (const hotel of HOTEL_LIST) {
+      if (hotel.id === id) {
+        return hotel;
+      }
+    }
+
+    return null;
+  }
+
   public listAll(): Array<Hotel> {
-    return data;
+    return HOTEL_LIST;
   }
 
   public filterByName(name: string): Array<Hotel> {
-    return data.filter((item: Hotel) => item.name === name);
+    return HOTEL_LIST.filter((item: Hotel) => item.name === name);
   }
 
   public filterByPrice(price: number): Array<Hotel> {
-    return data.filter((item: Hotel) => item.price <= price);
+    return HOTEL_LIST.filter((item: Hotel) => item.price !== null && item.price <= price);
   }
 
   public filterByStars(stars: number): Array<Hotel> {
-    return data.filter((item: Hotel) => item.stars === stars);
+    return HOTEL_LIST.filter((item: Hotel) => item.stars === stars);
   }
 
   public filterByAmenities(amenities: Array<string>): Array<Hotel> {
-    return data.filter((item: Hotel) => {
+    return HOTEL_LIST.filter((item: Hotel) => {
       for (const amenity of amenities) {
-        if (item.amenities.includes(amenity)) {
+        if (item.amenities !== null && item.amenities.includes(amenity)) {
           return true;
         }
       }
