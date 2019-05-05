@@ -19,7 +19,7 @@ pipeline {
     }
     stage ("Next Build") {
       steps {
-        input message: "Finished using the web site? (Click \"Proceed\" to continue)"
+        input message: "Finish the api? (Click \"Proceed\" to continue)"
       }
     }
   }
