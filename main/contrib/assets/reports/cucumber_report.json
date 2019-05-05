@@ -1,0 +1,174 @@
+[
+  {
+    "description": "  los clientes necesitan filtrar el listado\n  de hoteles por un conjunto de criterios",
+    "keyword": "Feature",
+    "name": "Filtrar Hoteles",
+    "line": 1,
+    "id": "filtrar-hoteles",
+    "tags": [],
+    "uri": "test/factory/FiltrarHoteles.feature",
+    "elements": [
+      {
+        "id": "filtrar-hoteles;filtrar-hoteles-por-nombre",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Filtrar Hoteles Por Nombre",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que los clientes necesitan filtrar el listado de hoteles por nombre",
+            "match": {
+              "location": "test/factory/steps/FiltrarHoteles.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "se consuma el endpoint /hotels?filters=name",
+            "match": {
+              "location": "test/factory/steps/FiltrarHoteles.steps.js:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "debe devolverse un listado que cumpla las exigencias del filtrado",
+            "match": {
+              "location": "test/factory/steps/FiltrarHoteles.steps.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  los clientes necesitan conocer\n  en detalle la información de un Hotel",
+    "keyword": "Feature",
+    "name": "Información Único Hotel",
+    "line": 1,
+    "id": "información-único-hotel",
+    "tags": [],
+    "uri": "test/factory/InfoUnicoHotel.feature",
+    "elements": [
+      {
+        "id": "información-único-hotel;devolver-información-único-hotel",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Devolver Información Único Hotel",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que un cliente necesita la información detallada de un único Hotel",
+            "match": {
+              "location": "test/factory/steps/InfoUnicoHotel.steps.js:4"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "consulte el end point /hotel con id",
+            "match": {
+              "location": "test/factory/steps/InfoUnicoHotel.steps.js:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "debe devolver la información detallada de un único hotel si existe",
+            "match": {
+              "location": "test/factory/steps/InfoUnicoHotel.steps.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  los clientes necesitan conocer\n  el listado de los hoteles",
+    "keyword": "Feature",
+    "name": "Listar Hoteles",
+    "line": 1,
+    "id": "listar-hoteles",
+    "tags": [],
+    "uri": "test/factory/ListarHoteles.feature",
+    "elements": [
+      {
+        "id": "listar-hoteles;quiero-listar-hoteles",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Quiero listar hoteles",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que los clientes necesitan listar hoteles",
+            "match": {
+              "location": "test/factory/steps/ListarHotels.steps.js:4"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "realice una consulta al endPoint /hotels",
+            "match": {
+              "location": "test/factory/steps/ListarHotels.steps.js:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "debe entregarse una lista de hoteles",
+            "match": {
+              "location": "test/factory/steps/ListarHotels.steps.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

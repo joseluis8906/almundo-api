@@ -14,8 +14,8 @@
   "reporters": [
     "default",
     ["jest-html-reporters", {
-      "publicPath": "test/reports",
-      "filename": "jest_report.html"
+      "publicPath": "./main/contrib/assets/reports",
+      "filename": "unit.html"
     }]
   ],
   "moduleNameMapper": {

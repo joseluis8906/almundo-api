@@ -6,10 +6,11 @@
   "scripts": {
     "pre:dev": "npm run build && node --inspect=9229 dist/index.js",
     "dev": "./node_modules/nodemon/bin/nodemon.js",
-    "build": "rm -rf dist || true && ./node_modules/.bin/tsc && cp -R main/contrib/assets/ dist/contrib/",
+    "build": "rm -rf dist || true && ./node_modules/.bin/tsc && npm run copy:resources",
     "serve": "node dist/index.js",
     "test:unit": "./node_modules/.bin/jest --config=jest.config.json",
-    "test:factory": "./node_modules/.bin/tsc test/factory/steps/*.steps.ts && ./node_modules/.bin/cucumber-js --format=json:./test/reports/cucumber_report.json test/factory/ && node cucumber-report.js"
+    "test:factory": "./node_modules/.bin/tsc test/factory/steps/*.steps.ts && ./node_modules/.bin/cucumber-js --format=json:./main/contrib/assets/reports/cucumber_report.json test/factory/ && node cucumber-report.js",
+    "copy:resources": "cp -R main/contrib/assets/ dist/contrib/"
   },
   "_moduleAliases": {
     "@root": ".",
@@ -19,11 +20,13 @@
   "author": "Jose Luis Cáceres Escudero",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "module-alias": "^2.2.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
+    "@types/cors": "^2.8.5",
     "@types/cucumber": "^4.0.5",
     "@types/express": "^4.16.1",
     "@types/jest": "^24.0.12",
