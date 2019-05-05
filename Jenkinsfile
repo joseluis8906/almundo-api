@@ -18,7 +18,9 @@ pipeline {
       }
     }
     stage ("Next Build") {
-      input message: "Finished using the web site? (Click \"Proceed\" to continue)"
+      steps {
+        input message: "Finished using the web site? (Click \"Proceed\" to continue)"
+      }
     }
   }
 }
