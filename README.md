@@ -1,7 +1,7 @@
 # almundo-api
 Demostración de servicio Api Rest.<br />
 
-##Endpoints
+## Endpoints
 
 Consultar la lista de hoteles:<br />
 http://localhost:3000/api/v1/hotels
