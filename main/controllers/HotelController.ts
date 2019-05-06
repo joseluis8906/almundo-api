@@ -7,7 +7,7 @@ export default class HotelController {
   public list(req: Request, res: Response): void {
     const amenities = req.query.amenities ? req.query.amenities.split(",") : null;
     res.json(
-      new HotelQueryFilter(req.query.page, req.query.name, amenities)
+      new HotelQueryFilter(req.query.page, req.query.name, amenities, req.query.stars)
         .resolve());
   }
 

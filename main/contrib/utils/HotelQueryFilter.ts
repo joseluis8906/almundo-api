@@ -5,19 +5,22 @@ export default class HotelQueryFilter {
   private page: number = 1;
   private name: string | null = null;
   private amenities: Array<string> | null = null;
+  private stars: number | null;
   private hotels: Array<Hotel>;
   private business: HotelBusiness;
 
-  constructor(page: number | null, name: string | null, amenities: Array<string> | null) {
+  constructor(page: number | null, name: string | null, amenities: Array<string> | null, stars: number | null) {
     this.page = page ? page : 1;
     this.name = name;
     this.amenities = amenities;
+    this.stars = stars;
 
     this.business = new HotelBusiness();
     this.hotels = this.business.listAll();
   }
 
   public resolve(): Array<Hotel> {
+    this.resolveForStars();
     this.resolveForAmenities();
     this.resolveForName();
     this.resolveForPage();
@@ -27,6 +30,12 @@ export default class HotelQueryFilter {
   private resolveForName(): void {
     if (this.name) {
       this.hotels = this.business.filterByName(this.name);
+    }
+  }
+
+  private resolveForStars(): void {
+    if (this.stars) {
+      this.hotels = this.business.filterByStars(this.stars);
     }
   }
 
