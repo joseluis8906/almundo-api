@@ -48,7 +48,7 @@ Abrir la dirección http://localhost:3000/
 
 ## Demo de prueba online
 
-En la dirección https://almundoapi-portafolio.josecaceres.info puede consumir una instancia del proyecto que se despliega de forma continua mediante jenkins.
+En la dirección https://portafolio.josecaceres.info/almundo/api/v1 puede consumir una instancia del proyecto que se despliega de forma continua mediante jenkins.
 
 ## Reportes
 
