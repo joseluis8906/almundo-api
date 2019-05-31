@@ -6,7 +6,7 @@
   "scripts": {
     "pre:dev": "npm run build && node --inspect=9229 dist/index.js",
     "dev": "./node_modules/nodemon/bin/nodemon.js",
-    "build": "rm -rf dist || true && ./node_modules/.bin/tsc && npm run copy:resources",
+    "build": "rm -rf dist || true && tsc && npm run copy:resources",
     "serve": "node dist/index.js",
     "test:unit": "./node_modules/.bin/jest --config=jest.config.json",
     "test:factory": "./node_modules/.bin/tsc test/factory/steps/*.steps.ts && ./node_modules/.bin/cucumber-js --format=json:./main/contrib/assets/reports/cucumber_report.json test/factory/ && node cucumber-report.js",

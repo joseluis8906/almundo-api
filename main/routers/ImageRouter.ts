@@ -6,7 +6,7 @@ export default class ImageRouter {
 
   constructor(app: Application, version: string) {
     this.endPoint = `/static`;
-    
+
     app.use(this.endPoint, express.static(path.join(__dirname, "../contrib/assets")));
   }
 }
